@@ -1,0 +1,1636 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>91爆料网每日吃瓜 - 视频社区 | 每日热点追踪与原创内容平台</title>
+<meta name="description" content="91爆料网每日吃瓜官方网站，专注每日热点视频追踪与社区原创内容，提供高清视频、创作者社区、热点榜单与企业级内容生态服务。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111a2b'/%3E%3Ccircle cx='24' cy='26' r='6' fill='%23ff4d5e'/%3E%3Cpath d='M14 46c8-10 28-10 36 0' stroke='%23ffb703' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bgc:#111a2b;
+  --bgc-2:#0b1220;
+  --panel:#182338;
+  --panel-2:#1f2d47;
+  --line:rgba(255,255,255,.10);
+  --txt:#eaf0ff;
+  --txt-2:#a8b6d1;
+  --neon:#3ff0c4;
+  --pink:#ff4d5e;
+  --amber:#ffb703;
+  --violet:#8b7cff;
+  --r:16px;
+  --shadow:0 16px 40px rgba(0,0,0,.35);
+  --stickyH:104px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--stickyH)}
+body{
+  margin:0;
+  background:
+    radial-gradient(1100px 520px at 10% -8%, rgba(63,240,196,.10), transparent 60%),
+    radial-gradient(900px 500px at 95% 4%, rgba(255,77,94,.10), transparent 62%),
+    var(--bgc);
+  color:var(--txt);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.3;letter-spacing:.2px}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font-family:inherit;cursor:pointer}
+.bao-wrap{width:min(1200px,92vw);margin:0 auto}
+.bao-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ============ 公告 + 页头 吸顶 ============ */
+.bao-stickyhead{position:sticky;top:0;z-index:80}
+.bao-notice{
+  background:linear-gradient(90deg,#1b2b4a,#1a2740 45%,#231a34);
+  border-bottom:1px solid var(--line);
+  font-size:13.5px;
+  color:#cfe0ff;
+}
+.bao-notice .bao-wrap{display:flex;align-items:center;gap:12px;padding:8px 0;min-height:38px}
+.bao-notice-tag{
+  flex:0 0 auto;background:var(--pink);color:#fff;font-size:11.5px;font-weight:700;
+  padding:2px 8px;border-radius:999px;letter-spacing:1px;
+}
+.bao-notice-track{display:flex;gap:26px;overflow:hidden;white-space:nowrap;flex:1 1 auto;-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent)}
+.bao-notice-track span{display:inline-flex;align-items:center;gap:8px}
+.bao-notice-track i{font-style:normal;color:var(--neon);font-size:11px;border:1px solid rgba(63,240,196,.45);padding:0 6px;border-radius:5px}
+.bao-notice-more{flex:0 0 auto;font-size:12.5px;color:var(--amber);border:1px solid rgba(255,183,3,.4);padding:2px 10px;border-radius:999px;background:transparent}
+.bao-notice-more:hover{background:rgba(255,183,3,.14)}
+
+.bao-header{
+  background:rgba(13,21,36,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.bao-header .bao-wrap{display:flex;align-items:center;gap:18px;height:66px}
+.bao-brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.bao-brand-mark{
+  width:38px;height:38px;border-radius:11px;flex:0 0 auto;
+  background:conic-gradient(from 210deg,#3ff0c4,#8b7cff,#ff4d5e,#ffb703,#3ff0c4);
+  display:grid;place-items:center;box-shadow:0 6px 18px rgba(139,124,255,.35);
+}
+.bao-brand-mark svg{width:22px;height:22px}
+.bao-brand-name{font-size:17px;font-weight:800;letter-spacing:.4px}
+.bao-brand-name em{font-style:normal;color:var(--neon)}
+.bao-brand-sub{display:block;font-size:10.5px;color:var(--txt-2);letter-spacing:2px;font-weight:400}
+
+.bao-nav{display:flex;gap:4px;flex:1 1 auto;flex-wrap:wrap}
+.bao-nav a{
+  font-size:14px;color:var(--txt-2);padding:7px 12px;border-radius:9px;transition:.22s;
+}
+.bao-nav a:hover,.bao-nav a:focus-visible{color:#fff;background:rgba(63,240,196,.12);outline:none}
+
+.bao-head-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.bao-search{position:relative;display:flex;align-items:center}
+.bao-search input{
+  width:190px;background:var(--panel);border:1px solid var(--line);color:var(--txt);
+  padding:8px 34px 8px 12px;border-radius:10px;font-size:13px;outline:none;transition:.25s;
+}
+.bao-search input:focus{border-color:rgba(63,240,196,.6);width:230px;box-shadow:0 0 0 3px rgba(63,240,196,.12)}
+.bao-search button{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  background:transparent;border:0;color:var(--txt-2);padding:4px;display:grid;place-items:center;border-radius:7px;
+}
+.bao-search button:hover{color:var(--neon)}
+.bao-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  border-radius:10px;font-size:13.5px;font-weight:600;padding:9px 16px;border:1px solid transparent;
+  transition:.22s;white-space:nowrap;
+}
+.bao-btn-primary{background:linear-gradient(135deg,#3ff0c4,#2ec7a4);color:#04231c;box-shadow:0 8px 22px rgba(63,240,196,.25)}
+.bao-btn-primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(63,240,196,.35)}
+.bao-btn-ghost{background:rgba(255,255,255,.05);border-color:var(--line);color:var(--txt)}
+.bao-btn-ghost:hover{background:rgba(255,255,255,.1)}
+.bao-burger{display:none;background:var(--panel);border:1px solid var(--line);color:var(--txt);border-radius:10px;width:38px;height:38px;font-size:17px}
+.bao-mobilenav{display:none;border-top:1px solid var(--line);background:rgba(11,18,32,.98);padding:10px 0 16px}
+.bao-mobilenav.open{display:block}
+.bao-mobilenav a{display:block;padding:10px 4px;border-bottom:1px dashed rgba(255,255,255,.07);color:var(--txt-2);font-size:14.5px}
+.bao-mobilenav a:hover{color:var(--neon)}
+
+/* ============ 首屏 左文右侧大图 + 数据条 ============ */
+.bao-hero{padding:52px 0 26px}
+.bao-hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:44px;align-items:center}
+.bao-kicker{
+  display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:1.4px;color:var(--neon);
+  border:1px solid rgba(63,240,196,.35);background:rgba(63,240,196,.07);padding:5px 12px;border-radius:999px;margin-bottom:20px;
+}
+.bao-kicker b{width:6px;height:6px;border-radius:50%;background:var(--neon);box-shadow:0 0 10px var(--neon)}
+.bao-hero h1{
+  font-size:clamp(34px,4.6vw,60px);font-weight:900;letter-spacing:-.5px;line-height:1.12;margin-bottom:8px;
+}
+.bao-hero h1 .bao-h1-mark{
+  background:linear-gradient(100deg,#3ff0c4,#8b7cff 55%,#ff4d5e);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.bao-hero-tagline{font-size:clamp(16px,1.6vw,20px);color:#c8d6f2;font-weight:600;margin:16px 0 18px;line-height:1.7}
+.bao-hero-tagline strong{color:var(--amber);font-weight:800}
+.bao-hero-desc{color:var(--txt-2);font-size:15px;max-width:56ch}
+.bao-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 26px}
+.bao-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;border-top:1px solid var(--line);padding-top:20px;max-width:520px}
+.bao-stat-num{font-size:clamp(20px,2.4vw,27px);font-weight:900;color:#fff;letter-spacing:.5px}
+.bao-stat-num span{color:var(--neon);font-size:14px;margin-left:2px;font-weight:700}
+.bao-stat-label{font-size:12.5px;color:var(--txt-2)}
+
+.bao-hero-visual{position:relative}
+.bao-hero-frame{
+  position:relative;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 30px 70px rgba(0,0,0,.5);aspect-ratio:1/1;
+}
+.bao-hero-frame img{width:100%;height:100%;object-fit:cover}
+.bao-hero-play{
+  position:absolute;inset:auto 0 0 0;padding:18px 20px;display:flex;align-items:center;gap:12px;
+  background:linear-gradient(0deg,rgba(4,8,16,.92),rgba(4,8,16,.1) 78%,transparent);
+}
+.bao-play-dot{
+  width:44px;height:44px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+  background:rgba(63,240,196,.95);color:#04231c;font-size:15px;box-shadow:0 0 0 8px rgba(63,240,196,.18);
+}
+.bao-hero-play-txt b{display:block;font-size:14.5px;color:#fff;line-height:1.4}
+.bao-hero-play-txt small{color:#9fb2d1;font-size:12px}
+.bao-hero-badge{
+  position:absolute;top:16px;left:16px;background:rgba(255,77,94,.94);color:#fff;font-size:12px;font-weight:700;
+  padding:5px 11px;border-radius:8px;letter-spacing:.6px;
+}
+.bao-hero-float{
+  position:absolute;right:-14px;bottom:22%;background:rgba(24,35,56,.94);border:1px solid var(--line);
+  border-radius:14px;padding:11px 14px;box-shadow:var(--shadow);backdrop-filter:blur(8px);
+}
+.bao-hero-float b{color:var(--amber);font-size:16px;display:block;line-height:1.2}
+.bao-hero-float span{font-size:11.5px;color:var(--txt-2)}
+
+/* ============ 通用 section ============ */
+.bao-sec{padding:52px 0}
+.bao-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:26px}
+.bao-sec-head h2{font-size:clamp(23px,2.7vw,32px);font-weight:900;letter-spacing:-.3px}
+.bao-sec-head h2 i{font-style:normal;color:var(--neon)}
+.bao-sec-head p{font-size:13.5px;color:var(--txt-2);margin-top:8px;max-width:64ch}
+.bao-sec-label{
+  font-size:11.5px;letter-spacing:2.4px;color:var(--violet);font-weight:700;margin-bottom:10px;display:block;
+}
+
+/* 焦点内容 一幅重点大图 + 文字列表 */
+.bao-focus-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:26px}
+.bao-focus-main{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  transition:.25s;
+}
+.bao-focus-main:hover{transform:translateY(-3px);border-color:rgba(63,240,196,.4);box-shadow:var(--shadow)}
+.bao-focus-main figure{margin:0;position:relative;aspect-ratio:16/9;overflow:hidden}
+.bao-focus-main img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.bao-focus-main:hover img{transform:scale(1.04)}
+.bao-focus-main figcaption{
+  position:absolute;left:14px;bottom:12px;display:flex;gap:8px;flex-wrap:wrap;
+}
+.bao-chip{
+  font-size:11.5px;padding:3px 9px;border-radius:999px;background:rgba(8,14,26,.82);border:1px solid var(--line);
+  color:#cfe0ff;backdrop-filter:blur(4px);
+}
+.bao-chip.hot{background:var(--pink);border-color:transparent;color:#fff;font-weight:700}
+.bao-chip.new{background:rgba(255,183,3,.9);border-color:transparent;color:#241a00;font-weight:700}
+.bao-focus-body{padding:18px 20px 20px}
+.bao-focus-body h3{font-size:20px;margin-bottom:8px}
+.bao-focus-body p{color:var(--txt-2);font-size:14px}
+.bao-meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:12.5px;color:var(--txt-2);align-items:center}
+.bao-meta b{color:#dbe6ff;font-weight:600}
+.bao-focus-list{display:flex;flex-direction:column;gap:12px}
+.bao-focus-item{
+  display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;background:var(--panel-2);
+  border:1px solid var(--line);border-radius:13px;padding:14px 16px;transition:.22s;
+}
+.bao-focus-item:hover{border-color:rgba(139,124,255,.5);background:#22304c}
+.bao-focus-rank{
+  font-size:15px;font-weight:900;color:var(--neon);font-style:italic;line-height:1.5;
+}
+.bao-focus-item:nth-child(2) .bao-focus-rank{color:var(--amber)}
+.bao-focus-item:nth-child(3) .bao-focus-rank{color:var(--pink)}
+.bao-focus-item h4{font-size:15px;margin-bottom:5px}
+.bao-focus-item p{font-size:12.8px;color:var(--txt-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bao-focus-item .bao-meta{margin-top:8px;gap:10px;font-size:11.5px}
+
+/* 视频流 三列等高等卡片 */
+.bao-filterbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.bao-filter{
+  background:rgba(255,255,255,.05);border:1px solid var(--line);color:var(--txt-2);
+  padding:7px 15px;border-radius:999px;font-size:13px;transition:.2s;
+}
+.bao-filter:hover{color:#fff;border-color:rgba(63,240,196,.5)}
+.bao-filter.active{background:linear-gradient(135deg,#3ff0c4,#2ec7a4);color:#04231c;font-weight:700;border-color:transparent}
+.bao-vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.bao-vcard{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  display:flex;flex-direction:column;transition:.25s;
+}
+.bao-vcard:hover{transform:translateY(-4px);border-color:rgba(139,124,255,.45);box-shadow:var(--shadow)}
+.bao-vcard figure{margin:0;position:relative;aspect-ratio:16/9;overflow:hidden;background:#0d1524}
+.bao-vcard img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.bao-vcard:hover img{transform:scale(1.05)}
+.bao-vcard-play{
+  position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:.25s;
+  background:rgba(6,11,21,.42);
+}
+.bao-vcard:hover .bao-vcard-play{opacity:1}
+.bao-vcard-play i{
+  width:46px;height:46px;border-radius:50%;background:rgba(63,240,196,.95);color:#04231c;
+  display:grid;place-items:center;font-style:normal;font-size:15px;font-weight:700;
+}
+.bao-vtime{
+  position:absolute;right:9px;bottom:8px;font-size:11.5px;background:rgba(4,8,16,.86);
+  padding:1px 7px;border-radius:5px;color:#e8f0ff;
+}
+.bao-vbody{padding:15px 16px 16px;display:flex;flex-direction:column;gap:9px;flex:1 1 auto}
+.bao-vbody h3{font-size:15.5px;line-height:1.45}
+.bao-vbody p{font-size:13px;color:var(--txt-2)}
+.bao-tags{display:flex;flex-wrap:wrap;gap:6px}
+.bao-tag{font-size:11.5px;color:#9fd9ff;background:rgba(63,240,196,.09);border:1px solid rgba(63,240,196,.2);padding:1px 8px;border-radius:6px}
+.bao-vfoot{
+  margin-top:auto;display:flex;align-items:center;gap:8px;padding-top:10px;border-top:1px dashed rgba(255,255,255,.09);
+  font-size:12px;color:var(--txt-2);flex-wrap:wrap;
+}
+.bao-vfoot .bao-author{display:flex;align-items:center;gap:6px;font-weight:600;color:#d2dff8}
+.bao-ava{width:22px;height:22px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;font-size:11px;font-weight:800;color:#0a1424}
+.bao-act{
+  display:inline-flex;align-items:center;gap:4px;background:transparent;border:0;color:var(--txt-2);
+  font-size:12px;padding:3px 5px;border-radius:6px;transition:.18s;
+}
+.bao-act:hover{background:rgba(255,255,255,.07);color:#fff}
+.bao-act.on{color:var(--pink)}
+.bao-act.on .bao-heart{color:var(--pink)}
+.bao-heart{font-size:13px;line-height:1}
+
+/* 图文索引 摘要列表 */
+.bao-index-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.bao-index-item{
+  display:grid;grid-template-columns:132px minmax(0,1fr);gap:16px;background:var(--panel);
+  border:1px solid var(--line);border-radius:14px;padding:14px;transition:.22s;
+}
+.bao-index-item:hover{border-color:rgba(255,183,3,.45);background:#1d2a42}
+.bao-index-item figure{margin:0;border-radius:10px;overflow:hidden;aspect-ratio:4/3}
+.bao-index-item img{width:100%;height:100%;object-fit:cover}
+.bao-index-item h3{font-size:15px;margin-bottom:6px}
+.bao-index-item p{font-size:12.8px;color:var(--txt-2)}
+.bao-index-item .bao-meta{margin-top:9px;font-size:11.5px;gap:10px}
+
+/* 品牌故事 / 关键词解析 */
+.bao-story-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:34px;align-items:start}
+.bao-story-figure{margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.bao-story-figure img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.bao-story-figure figcaption{font-size:12px;color:var(--txt-2);padding:9px 13px;background:var(--panel-2);border-top:1px solid var(--line)}
+.bao-article h3{font-size:17.5px;margin:24px 0 10px;padding-left:12px;border-left:3px solid var(--neon)}
+.bao-article h3:first-child{margin-top:0}
+.bao-article p{font-size:14.5px;color:#c3d1ea;margin-bottom:12px}
+.bao-article strong{color:#fff}
+.bao-article em{font-style:normal;color:var(--amber);font-weight:600}
+.bao-quote{
+  border-left:3px solid var(--violet);background:rgba(139,124,255,.09);border-radius:0 12px 12px 0;
+  padding:14px 18px;margin:18px 0;font-size:14px;color:#d7e2f8;
+}
+
+/* 专题 三列 */
+.bao-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.bao-topic{
+  background:linear-gradient(165deg,#1b2740,#162034);border:1px solid var(--line);border-radius:var(--r);
+  padding:20px;display:flex;flex-direction:column;gap:12px;transition:.25s;
+}
+.bao-topic:hover{border-color:rgba(63,240,196,.4);transform:translateY(-3px)}
+.bao-topic-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.bao-topic-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:15px;font-weight:900}
+.bao-status{font-size:11.5px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--txt-2)}
+.bao-status.doing{color:var(--neon);border-color:rgba(63,240,196,.4);background:rgba(63,240,196,.08)}
+.bao-topic h3{font-size:16.5px}
+.bao-topic>p{font-size:13px;color:var(--txt-2)}
+.bao-topic ul{display:flex;flex-direction:column;gap:7px;margin-top:2px}
+.bao-topic li{font-size:12.8px;color:#b9c9e6;display:flex;gap:7px}
+.bao-topic li::before{content:"▸";color:var(--amber);flex:0 0 auto}
+
+/* 作者矩阵 双列简介 */
+.bao-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.bao-author-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;
+  display:grid;grid-template-columns:56px minmax(0,1fr);gap:14px;transition:.22s;
+}
+.bao-author-card:hover{border-color:rgba(139,124,255,.5);background:#1e2b45}
+.bao-author-ava{
+  width:56px;height:56px;border-radius:16px;display:grid;place-items:center;
+  font-size:20px;font-weight:900;color:#08131f;
+}
+.bao-author-card h3{font-size:15.5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.bao-author-card h3 button{
+  background:transparent;border:1px solid var(--line);color:var(--txt-2);font-size:11px;border-radius:999px;padding:1px 8px;
+}
+.bao-author-card h3 button:hover{color:var(--neon);border-color:rgba(63,240,196,.5)}
+.bao-author-field{font-size:12px;color:var(--neon);margin:4px 0 7px}
+.bao-author-card p{font-size:13px;color:var(--txt-2)}
+.bao-author-nums{display:flex;gap:16px;margin-top:10px;font-size:12px;color:var(--txt-2)}
+.bao-author-nums b{color:#e6eeff;font-weight:700}
+
+/* 评价 双列短评 */
+.bao-cmt-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.bao-cmt{
+  background:var(--panel-2);border:1px solid var(--line);border-radius:13px;padding:15px 17px;position:relative;
+  transition:.2s;
+}
+.bao-cmt:hover{border-color:rgba(63,240,196,.4)}
+.bao-cmt-head{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.bao-cmt-head .bao-ava{width:28px;height:28px;font-size:12px}
+.bao-cmt-head b{font-size:13.5px}
+.bao-cmt-head small{color:var(--txt-2);font-size:11.5px;margin-left:auto}
+.bao-cmt p{font-size:13.2px;color:#c6d3ec}
+.bao-stars{color:var(--amber);font-size:12px;letter-spacing:1px;margin-top:8px;display:inline-block}
+
+/* 辅助区 双模块 */
+.bao-aux-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.bao-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.bao-panel h3{font-size:17px;margin-bottom:4px}
+.bao-panel .bao-sub{font-size:12.5px;color:var(--txt-2);margin-bottom:14px}
+.bao-timeline{display:flex;flex-direction:column;gap:0}
+.bao-tl-item{display:grid;grid-template-columns:76px 14px minmax(0,1fr);gap:0 10px;padding-bottom:16px}
+.bao-tl-item time{font-size:12px;color:var(--txt-2);padding-top:2px}
+.bao-tl-dot{position:relative;display:flex;justify-content:center}
+.bao-tl-dot::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--neon);margin-top:6px;box-shadow:0 0 0 4px rgba(63,240,196,.14)}
+.bao-tl-dot::after{content:"";position:absolute;top:15px;bottom:-6px;width:1px;background:rgba(255,255,255,.12)}
+.bao-tl-item:last-child .bao-tl-dot::after{display:none}
+.bao-tl-item b{font-size:13.5px;display:block}
+.bao-tl-item span{font-size:12.5px;color:var(--txt-2)}
+.bao-more-link{font-size:12.5px;color:var(--neon);margin-top:6px;display:inline-block}
+.bao-more-link:hover{color:var(--amber)}
+
+.bao-faq details{border-bottom:1px solid rgba(255,255,255,.09);padding:12px 0}
+.bao-faq details:last-of-type{border-bottom:0}
+.bao-faq summary{
+  cursor:pointer;font-size:14px;font-weight:600;color:#dbe6ff;list-style:none;display:flex;gap:9px;align-items:flex-start;
+}
+.bao-faq summary::-webkit-details-marker{display:none}
+.bao-faq summary::before{content:"＋";color:var(--neon);font-weight:700;flex:0 0 auto}
+.bao-faq details[open] summary::before{content:"－"}
+.bao-faq p{font-size:13px;color:var(--txt-2);margin:9px 0 0 22px}
+
+.bao-partner-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.bao-partner{
+  border:1px solid var(--line);border-radius:11px;padding:14px 8px;text-align:center;
+  background:rgba(255,255,255,.03);font-size:12.5px;color:var(--txt-2);transition:.2s;
+}
+.bao-partner:hover{color:#fff;border-color:rgba(139,124,255,.5);background:rgba(139,124,255,.09)}
+.bao-partner b{display:block;color:#e6eeff;font-size:13px;margin-bottom:3px}
+
+/* 页脚 */
+.bao-footer{margin-top:30px;border-top:1px solid var(--line);background:var(--bgc-2);padding:42px 0 26px}
+.bao-foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
+.bao-foot-brand p{font-size:13px;color:var(--txt-2);margin-top:12px;max-width:36ch}
+.bao-foot-col h4{font-size:13.5px;color:#fff;margin-bottom:12px;letter-spacing:.5px}
+.bao-foot-col a{display:block;font-size:13px;color:var(--txt-2);padding:4px 0;transition:.18s}
+.bao-foot-col a:hover{color:var(--neon)}
+.bao-foot-bottom{
+  margin-top:30px;padding-top:18px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;
+  gap:10px 22px;justify-content:space-between;font-size:12px;color:#7d8cab;
+}
+
+/* 回到顶部 / Toast / 弹窗 */
+.bao-top{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:12px;z-index:90;
+  background:linear-gradient(135deg,#3ff0c4,#2ec7a4);color:#04231c;border:0;font-size:17px;font-weight:800;
+  box-shadow:0 12px 26px rgba(63,240,196,.3);opacity:0;pointer-events:none;transition:.28s;
+}
+.bao-top.show{opacity:1;pointer-events:auto}
+.bao-toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,16px);z-index:120;
+  background:rgba(16,26,44,.97);border:1px solid rgba(63,240,196,.45);color:#e9f3ff;
+  padding:10px 20px;border-radius:999px;font-size:13px;opacity:0;pointer-events:none;transition:.28s;
+  box-shadow:var(--shadow);
+}
+.bao-toast.show{opacity:1;transform:translate(-50%,0)}
+.bao-modal{
+  position:fixed;inset:0;z-index:130;display:none;place-items:center;padding:20px;
+  background:rgba(4,8,16,.72);backdrop-filter:blur(4px);
+}
+.bao-modal.open{display:grid}
+.bao-modal-card{
+  width:min(520px,100%);background:var(--panel);border:1px solid rgba(255,255,255,.16);
+  border-radius:18px;padding:26px;box-shadow:0 30px 70px rgba(0,0,0,.6);max-height:86vh;overflow:auto;
+}
+.bao-modal-card h3{font-size:18px;margin-bottom:6px}
+.bao-modal-card .bao-sub{font-size:12.5px;color:var(--txt-2);margin-bottom:16px}
+.bao-modal-close{
+  float:right;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--txt);
+  width:30px;height:30px;border-radius:9px;font-size:14px;line-height:1;
+}
+.bao-modal-close:hover{background:rgba(255,77,94,.2);color:#ff8f99}
+.bao-form{display:flex;flex-direction:column;gap:12px}
+.bao-form label{font-size:12.5px;color:var(--txt-2);display:flex;flex-direction:column;gap:6px}
+.bao-form input,.bao-form textarea,.bao-form select{
+  background:var(--bgc-2);border:1px solid var(--line);color:var(--txt);border-radius:9px;
+  padding:9px 12px;font-size:13.5px;outline:none;font-family:inherit;
+}
+.bao-form input:focus,.bao-form textarea:focus{border-color:rgba(63,240,196,.55)}
+.bao-share-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.bao-share-btn{
+  background:var(--panel-2);border:1px solid var(--line);color:var(--txt);border-radius:10px;
+  padding:10px;font-size:13px;transition:.2s;
+}
+.bao-share-btn:hover{background:#26374f;border-color:rgba(63,240,196,.5)}
+.bao-author-modal .bao-ava{width:58px;height:58px;font-size:22px;border-radius:16px;margin-bottom:12px}
+.bao-author-modal p{font-size:13.5px;color:var(--txt-2);margin-top:10px}
+
+/* 响应式 */
+@media (max-width:1040px){
+  .bao-hero-grid{grid-template-columns:minmax(0,1fr);gap:30px}
+  .bao-hero-visual{order:-1}
+  .bao-hero-frame{aspect-ratio:16/10}
+  .bao-vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bao-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bao-foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:880px){
+  .bao-nav{display:none}
+  .bao-burger{display:grid;place-items:center}
+  .bao-search input{width:150px}
+  .bao-search input:focus{width:172px}
+  .bao-focus-grid{grid-template-columns:minmax(0,1fr)}
+  .bao-story-grid{grid-template-columns:minmax(0,1fr)}
+  .bao-story-figure img{aspect-ratio:16/10}
+  .bao-author-grid{grid-template-columns:minmax(0,1fr)}
+  .bao-cmt-grid{grid-template-columns:minmax(0,1fr)}
+  .bao-aux-grid{grid-template-columns:minmax(0,1fr)}
+  .bao-index-list{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:620px){
+  .bao-header .bao-wrap{gap:10px;height:60px}
+  .bao-brand-sub{display:none}
+  .bao-head-tools .bao-search{display:none}
+  .bao-head-tools .bao-btn-ghost{display:none}
+  .bao-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .bao-vgrid{grid-template-columns:minmax(0,1fr)}
+  .bao-topic-grid{grid-template-columns:minmax(0,1fr)}
+  .bao-partner-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bao-foot-grid{grid-template-columns:minmax(0,1fr);gap:22px}
+  .bao-notice-more{display:none}
+  .bao-hero-float{display:none}
+  .bao-index-item{grid-template-columns:104px minmax(0,1fr);gap:12px}
+  .bao-sec{padding:40px 0}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- S1 公告条 + 页头（吸顶） -->
+<div class="bao-stickyhead" id="baoTop">
+  <div class="bao-notice">
+    <div class="bao-wrap">
+      <span class="bao-notice-tag">公告</span>
+      <div class="bao-notice-track">
+        <span><i>新增</i>「每日吃瓜·第 47 期」热点视频合集已上线，收录 12 条原创追踪内容</span>
+        <span><i>更新</i>创作者激励计划第三季开放报名，投稿通道同步开启</span>
+        <span><i>发布</i>《爆料内容核实与合规操作手册》2026 修订版正式发布</span>
+      </div>
+      <button class="bao-notice-more" type="button" data-modal="baoModalNews">查看全部 ›</button>
+    </div>
+  </div>
+  <header class="bao-header">
+    <div class="bao-wrap">
+      <a class="bao-brand" href="#baoT" aria-label="91爆料网每日吃瓜官方网站首页">
+        <span class="bao-brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="3" fill="#0b1220"/><path d="M4 18c3-4 13-4 16 0" stroke="#0b1220" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </span>
+        <span>
+          <span class="bao-brand-name">91爆料网<em>每日吃瓜</em></span>
+          <span class="bao-brand-sub">DAILY HOTVIDEO</span>
+        </span>
+      </a>
+      <nav class="bao-nav" aria-label="主导航">
+        <a href="#baoFocus">热点焦点</a>
+        <a href="#baoVideos">视频专区</a>
+        <a href="#baoStory">品牌故事</a>
+        <a href="#baoTopic">专题企划</a>
+        <a href="#baoAuthors">创作者</a>
+        <a href="#baoComments">社区口碑</a>
+        <a href="#baoFaq">帮助中心</a>
+      </nav>
+      <div class="bao-head-tools">
+        <div class="bao-search">
+          <input type="search" id="baoSearchInput" placeholder="搜热点 / 创作者 / 专题" aria-label="站内搜索">
+          <button type="button" id="baoSearchBtn" aria-label="搜索">🔍</button>
+        </div>
+        <button class="bao-btn bao-btn-ghost" type="button" data-modal="baoModalSubmit">我要投稿</button>
+        <button class="bao-btn bao-btn-primary" type="button" data-modal="baoModalSub">订阅每日瓜</button>
+        <button class="bao-burger" id="baoBurger" type="button" aria-expanded="false" aria-controls="baoMobileNav" aria-label="展开导航">☰</button>
+      </div>
+    </div>
+    <div class="bao-mobilenav" id="baoMobileNav">
+      <div class="bao-wrap">
+        <a href="#baoFocus">热点焦点</a>
+        <a href="#baoVideos">视频专区</a>
+        <a href="#baoStory">品牌故事</a>
+        <a href="#baoTopic">专题企划</a>
+        <a href="#baoAuthors">创作者</a>
+        <a href="#baoComments">社区口碑</a>
+        <a href="#baoFaq">帮助中心</a>
+        <a href="#baoFooter">联系与版权</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="baoT">
+
+  <!-- S2 品牌首屏 -->
+  <section class="bao-sec bao-hero" aria-labelledby="baoHeroTitle">
+    <div class="bao-wrap bao-hero-grid">
+      <div>
+        <span class="bao-kicker"><b></b>官网 · 每日热点视频社区</span>
+        <h1 id="baoHeroTitle">91爆料网<span class="bao-h1-mark">每日吃瓜</span></h1>
+        <p class="bao-hero-tagline">热点追得稳，<strong>内容有底色</strong>——一个把“吃瓜”做成正经内容工业的原创视频品牌。</p>
+        <p class="bao-hero-desc">
+          作为深耕热点资讯与社区内容的视频品牌，本站以企业级内容审核与创作者运营体系为核心，围绕每日热点事件、人物访谈、城市现场与生活方式观察持续产出高清原创视频。我们希望每一次围观都留有分寸：信息可核实、表达有观点、讨论有温度，让“吃瓜”成为理解世界的入口，而不是情绪的出口。
+        </p>
+        <div class="bao-hero-actions">
+          <a class="bao-btn bao-btn-primary" href="#baoVideos">▶ 进入今日视频专区</a>
+          <a class="bao-btn bao-btn-ghost" href="#baoStory">了解品牌与内容准则</a>
+          <button class="bao-btn bao-btn-ghost" type="button" data-modal="baoModalSubmit">上传我的现场</button>
+        </div>
+        <div class="bao-hero-stats">
+          <div>
+            <div class="bao-stat-num" data-count="1286">0<span>+</span></div>
+            <div class="bao-stat-label">今日新增视频条目</div>
+          </div>
+          <div>
+            <div class="bao-stat-num" data-count="3240000">0<span>万</span></div>
+            <div class="bao-stat-label">日均播放与互动人次</div>
+          </div>
+          <div>
+            <div class="bao-stat-num" data-count="486">0<span>位</span></div>
+            <div class="bao-stat-label">签约与社区创作者</div>
+          </div>
+        </div>
+      </div>
+      <div class="bao-hero-visual">
+        <div class="bao-hero-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23182642'/%3E%3Cstop offset='.52' stop-color='%2322395d'/%3E%3Cstop offset='1' stop-color='%23131c30'/%3E%3C/linearGradient%3E%3CradialGradient id='g2' cx='.72' cy='.24' r='.6'%3E%3Cstop offset='0' stop-color='%233ff0c4' stop-opacity='.5'/%3E%3Cstop offset='1' stop-color='%233ff0c4' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='g3' cx='.18' cy='.78' r='.55'%3E%3Cstop offset='0' stop-color='%23ff4d5e' stop-opacity='.45'/%3E%3Cstop offset='1' stop-color='%23ff4d5e' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='800' height='800' fill='url(%23g1)'/%3E%3Crect width='800' height='800' fill='url(%23g2)'/%3E%3Crect width='800' height='800' fill='url(%23g3)'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.13'%3E%3Cpath d='M0 560 L800 400'/%3E%3Cpath d='M0 640 L800 480'/%3E%3Cpath d='M0 480 L800 320'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='530' cy='330' r='118' fill='none' stroke='%233ff0c4' stroke-width='2' stroke-opacity='.55'/%3E%3Ccircle cx='530' cy='330' r='86' fill='%230e1728' stroke='%23ffffff' stroke-opacity='.25'/%3E%3Cpath d='M506 300 L570 330 L506 360 Z' fill='%233ff0c4'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.82'%3E%3Crect x='70' y='120' width='210' height='12' rx='6'/%3E%3Crect x='70' y='150' width='148' height='10' rx='5' fill-opacity='.45'/%3E%3Crect x='70' y='176' width='176' height='10' rx='5' fill-opacity='.3'/%3E%3C/g%3E%3Cg%3E%3Crect x='70' y='620' width='250' height='96' rx='14' fill='%230d1524' fill-opacity='.7' stroke='%23ffffff' stroke-opacity='.16'/%3E%3Ccircle cx='108' cy='668' r='16' fill='%23ffb703'/%3E%3Crect x='136' y='654' width='120' height='9' rx='4.5' fill='%23ffffff' fill-opacity='.8'/%3E%3Crect x='136' y='672' width='80' height='8' rx='4' fill='%23ffffff' fill-opacity='.4'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.2'%3E%3Ccircle cx='680' cy='120' r='5'/%3E%3Ccircle cx='710' cy='152' r='3'/%3E%3Ccircle cx='650' cy='160' r='4'/%3E%3C/g%3E%3C/svg%3E" alt="91爆料网每日吃瓜首屏主视觉：深色数据界面与播放标识构成的热点监控画面" width="800" height="800" loading="eager">
+          <span class="bao-hero-badge">今日头条追踪</span>
+          <div class="bao-hero-play">
+            <span class="bao-play-dot" aria-hidden="true">▶</span>
+            <span class="bao-hero-play-txt">
+              <b>每日吃瓜·第 47 期：一周热点核查实录</b>
+              <small>18:42 · 原创 · 高清 · 已通过三道内容审核</small>
+            </span>
+          </div>
+        </div>
+        <div class="bao-hero-float">
+          <b>+38.6%</b>
+          <span>本周社区投稿增长</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容 -->
+  <section class="bao-sec" id="baoFocus" aria-labelledby="baoFocusTitle">
+    <div class="bao-wrap">
+      <div class="bao-sec-head">
+        <div>
+          <span class="bao-sec-label">TODAY FOCUS</span>
+          <h2 id="baoFocusTitle">今日<b>焦点追踪</b>：值得点开的三条现场</h2>
+          <p>编辑组从当日 1286 条投稿中筛出可核实、有画面、有观点的内容，配以原创核查说明，让热点不止停在标题。</p>
+        </div>
+        <a class="bao-btn bao-btn-ghost" href="#baoVideos">查看全部条目 ›</a>
+      </div>
+
+      <div class="bao-focus-grid">
+        <article class="bao-focus-main">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 540'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23713a4e'/%3E%3Cstop offset='.5' stop-color='%232a3252'/%3E%3Cstop offset='1' stop-color='%23121a2c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='540' fill='url(%23f1)'/%3E%3Cg opacity='.65'%3E%3Cpath d='M0 430 L200 340 L400 420 L620 300 L960 400 L960 540 L0 540 Z' fill='%23101a2b'/%3E%3C/g%3E%3Cg%3E%3Crect x='120' y='90' width='360' height='230' rx='18' fill='%230d1524' fill-opacity='.72' stroke='%23ffffff' stroke-opacity='.18'/%3E%3Ccircle cx='170' cy='140' r='16' fill='%23ff4d5e'/%3E%3Crect x='200' y='130' width='150' height='10' rx='5' fill='%23ffffff' fill-opacity='.8'/%3E%3Crect x='150' y='182' width='300' height='9' rx='4.5' fill='%23ffffff' fill-opacity='.35'/%3E%3Crect x='150' y='206' width='240' height='9' rx='4.5' fill='%23ffffff' fill-opacity='.25'/%3E%3Crect x='150' y='252' width='96' height='28' rx='14' fill='%233ff0c4'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='760' cy='180' r='72' fill='none' stroke='%23ffb703' stroke-width='3' stroke-opacity='.7'/%3E%3Ccircle cx='760' cy='180' r='44' fill='%23ffb703' fill-opacity='.2'/%3E%3Cpath d='M744 158 L786 180 L744 202 Z' fill='%23ffb703'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='.12'%3E%3Cpath d='M0 470 L960 470'/%3E%3Cpath d='M0 110 L960 110'/%3E%3C/g%3E%3C/svg%3E" alt="今日焦点追踪封面：城市热点监控画面与核查标签" width="960" height="540" loading="lazy">
+            <figcaption>
+              <span class="bao-chip hot">独家核查</span>
+              <span class="bao-chip">城市现场</span>
+              <span class="bao-chip">18:42</span>
+            </figcaption>
+          </figure>
+          <div class="bao-focus-body">
+            <h3>街角那场“全员围观”，我们找到了完整时间线</h3>
+            <p>一段 46 秒的现场视频在 4 小时内被转发数万次，画面之外的前后 20 分钟无人提及。采编组连夜联系到三位在场目击者与一位社区工作人员，用时间轴还原了事件起因、关键对话与最终处理结果，并附上核查方法说明。</p>
+            <div class="bao-meta">
+              <span>作者 <b>瓜田观察员</b></span>
+              <span>播放 <b>86.4 万</b></span>
+              <span>点赞 <b>3.2 万</b></span>
+              <span>收藏 <b>1.1 万</b></span>
+            </div>
+            <div class="bao-meta" style="margin-top:14px">
+              <button class="bao-act" type="button" data-like="12800">♥ 点赞 <b data-like-num>1.28万</b></button>
+              <button class="bao-act" type="button" data-fav="1">☆ 收藏</button>
+              <button class="bao-act" type="button" data-share="街角那场全员围观，我们找到了完整时间线">🔗 分享</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="bao-focus-list">
+          <article class="bao-focus-item">
+            <span class="bao-focus-rank">Top2</span>
+            <div>
+              <h4>深夜食堂老板的 300 条留言：一条视频背后的城市温度</h4>
+              <p>我们把一条“深夜还开着的小店”视频下的 300 条评论做完分类，发现人们聊的是加班、独居与一碗热汤。</p>
+              <div class="bao-meta"><span>作者 夜行镜头</span><span>播放 41.7 万</span><span class="bao-chip">情感故事</span></div>
+            </div>
+          </article>
+          <article class="bao-focus-item">
+            <span class="bao-focus-rank">Top3</span>
+            <div>
+              <h4>“热搜第一”到底怎么来的？一次数据链路的可视化拆解</h4>
+              <p>用 4 张原创图表解释热点是如何被推送到你面前的，附创作者可复用的选题判断清单。</p>
+              <div class="bao-meta"><span>作者 数据瓜农</span><span>播放 33.5 万</span><span class="bao-chip">行业观察</span></div>
+            </div>
+          </article>
+          <article class="bao-focus-item">
+            <span class="bao-focus-rank">Top4</span>
+            <div>
+              <h4>本地菜市场的一天：从凌晨四点到收摊的六组镜头</h4>
+              <p>没有旁白、没有配乐，只用环境声记录一座城市最早醒来的地方。</p>
+              <div class="bao-meta"><span>作者 城市切片</span><span>播放 27.9 万</span><span class="bao-chip">在地文化</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3b 视频专区 -->
+  <section class="bao-sec" id="baoVideos" aria-labelledby="baoVideosTitle">
+    <div class="bao-wrap">
+      <div class="bao-sec-head">
+        <div>
+          <span class="bao-sec-label">VIDEO FEED</span>
+          <h2 id="baoVideosTitle">视频专区：<b>每日吃瓜</b>精选六条</h2>
+          <p>按主题筛选你想看的内容类型。所有条目均标注作者、标签与互动数据，重点视频提供高清封面，其余以文字摘要呈现。</p>
+        </div>
+      </div>
+
+      <div class="bao-filterbar" id="baoFilterBar" role="group" aria-label="视频主题筛选">
+        <button class="bao-filter active" type="button" data-filter="all">全部</button>
+        <button class="bao-filter" type="button" data-filter="现场">城市现场</button>
+        <button class="bao-filter" type="button" data-filter="访谈">人物访谈</button>
+        <button class="bao-filter" type="button" data-filter="观察">行业观察</button>
+        <button class="bao-filter" type="button" data-filter="生活">生活方式</button>
+        <button class="bao-filter" type="button" data-filter="幕后">创作幕后</button>
+      </div>
+
+      <div class="bao-vgrid" id="baoVideoGrid">
+        <article class="bao-vcard" data-cat="现场">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231d3f57'/%3E%3Cstop offset='1' stop-color='%230d1a28'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v1)'/%3E%3Cg fill='%233ff0c4' fill-opacity='.75'%3E%3Crect x='40' y='250' width='26' height='70'/%3E%3Crect x='80' y='210' width='26' height='110'/%3E%3Crect x='120' y='170' width='26' height='150'/%3E%3Crect x='160' y='228' width='26' height='92'/%3E%3Crect x='200' y='140' width='26' height='180'/%3E%3C/g%3E%3Cg fill='%23ff4d5e'%3E%3Crect x='380' y='120' width='180' height='12' rx='6'/%3E%3Crect x='380' y='150' width='130' height='10' rx='5' fill-opacity='.6'/%3E%3Crect x='380' y='176' width='156' height='10' rx='5' fill-opacity='.4'/%3E%3C/g%3E%3Ccircle cx='520' cy='268' r='40' fill='%23ffb703' fill-opacity='.2' stroke='%23ffb703' stroke-width='2'/%3E%3Cpath d='M510 250 L536 268 L510 286 Z' fill='%23ffb703'/%3E%3C/svg%3E" alt="城市现场视频封面：数据柱状图与热点标签构成的追踪界面" width="640" height="360" loading="lazy">
+            <span class="bao-vtime">16:08</span>
+            <span class="bao-vcard-play" aria-hidden="true"><i>▶</i></span>
+          </figure>
+          <div class="bao-vbody">
+            <h3>路口 46 秒视频的完整还原</h3>
+            <p>三段不同角度的画面拼接与逐帧核对，补齐被裁掉的前因后果。</p>
+            <div class="bao-tags"><span class="bao-tag">城市现场</span><span class="bao-tag">核查</span></div>
+            <div class="bao-vfoot">
+              <span class="bao-author"><span class="bao-ava" style="background:#3ff0c4">瓜</span>瓜田观察员</span>
+              <button class="bao-act" type="button" data-like="8640"><span class="bao-heart">♥</span><b data-like-num>8640</b></button>
+              <button class="bao-act" type="button" data-fav="1"><span class="bao-heart">☆</span></button>
+              <button class="bao-act" type="button" data-share="路口46秒视频的完整还原">🔗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bao-vcard" data-cat="访谈">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23372a52'/%3E%3Cstop offset='1' stop-color='%23141b2c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v2)'/%3E%3Ccircle cx='180' cy='150' r='62' fill='%238b7cff' fill-opacity='.55'/%3E%3Ccircle cx='180' cy='140' r='30' fill='%23e9e4ff' fill-opacity='.85'/%3E%3Cpath d='M120 250c18-42 102-42 120 0' fill='%23e9e4ff' fill-opacity='.7'/%3E%3Cg fill='%23ffffff' fill-opacity='.75'%3E%3Crect x='320' y='110' width='240' height='13' rx='6'/%3E%3Crect x='320' y='145' width='180' height='10' rx='5' fill-opacity='.45'/%3E%3Crect x='320' y='172' width='210' height='10' rx='5' fill-opacity='.35'/%3E%3Crect x='320' y='206' width='120' height='26' rx='13' fill='%23ff4d5e' fill-opacity='.9'/%3E%3C/g%3E%3C/svg%3E" alt="人物访谈视频封面：紫色调人物剪影与访谈字幕条" width="640" height="360" loading="lazy">
+            <span class="bao-vtime">24:31</span>
+            <span class="bao-vcard-play" aria-hidden="true"><i>▶</i></span>
+          </figure>
+          <div class="bao-vbody">
+            <h3>和一位内容审核员聊了 90 分钟</h3>
+            <p>他每天要看 800 条视频，也得判断什么该被看见。这是访谈里最沉默也最有力量的一段。</p>
+            <div class="bao-tags"><span class="bao-tag">人物访谈</span><span class="bao-tag">内容生态</span></div>
+            <div class="bao-vfoot">
+              <span class="bao-author"><span class="bao-ava" style="background:#8b7cff">镜</span>镜前十分钟</span>
+              <button class="bao-act" type="button" data-like="6120"><span class="bao-heart">♥</span><b data-like-num>6120</b></button>
+              <button class="bao-act" type="button" data-fav="1"><span class="bao-heart">☆</span></button>
+              <button class="bao-act" type="button" data-share="和一位内容审核员聊了90分钟">🔗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bao-vcard" data-cat="观察">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23213b3a'/%3E%3Cstop offset='1' stop-color='%23101822'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v3)'/%3E%3Cg stroke='%233ff0c4' stroke-width='3' fill='none' stroke-opacity='.8'%3E%3Cpolyline points='40,290 140,240 240,260 340,170 440,196 540,110 600,132'/%3E%3C/g%3E%3Cg fill='%233ff0c4'%3E%3Ccircle cx='140' cy='240' r='6'/%3E%3Ccircle cx='340' cy='170' r='6'/%3E%3Ccircle cx='540' cy='110' r='6'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.22'%3E%3Crect x='40' y='40' width='160' height='10' rx='5'/%3E%3Crect x='40' y='64' width='110' height='8' rx='4'/%3E%3C/g%3E%3Cg fill='%23ffb703' fill-opacity='.85'%3E%3Crect x='430' y='250' width='170' height='12' rx='6'/%3E%3Crect x='430' y='276' width='120' height='10' rx='5' fill-opacity='.5'/%3E%3C/g%3E%3C/svg%3E" alt="行业观察视频封面：绿色趋势曲线与数据标注面板" width="640" height="360" loading="lazy">
+            <span class="bao-vtime">12:20</span>
+            <span class="bao-vcard-play" aria-hidden="true"><i>▶</i></span>
+          </figure>
+          <div class="bao-vbody">
+            <h3>热搜是怎么被推到你面前的</h3>
+            <p>一次可视化拆解：从内容产生、分发、扩散到二次传播，四个环节各自发生了什么。</p>
+            <div class="bao-tags"><span class="bao-tag">行业观察</span><span class="bao-tag">数据</span></div>
+            <div class="bao-vfoot">
+              <span class="bao-author"><span class="bao-ava" style="background:#ffb703">数</span>数据瓜农</span>
+              <button class="bao-act" type="button" data-like="7540"><span class="bao-heart">♥</span><b data-like-num>7540</b></button>
+              <button class="bao-act" type="button" data-fav="1"><span class="bao-heart">☆</span></button>
+              <button class="bao-act" type="button" data-share="热搜是怎么被推到你面前的">🔗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bao-vcard" data-cat="生活">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v4' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23462f22'/%3E%3Cstop offset='1' stop-color='%231a1a24'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v4)'/%3E%3Cg%3E%3Crect x='60' y='180' width='220' height='120' rx='12' fill='%23ffb703' fill-opacity='.28'/%3E%3Crect x='80' y='200' width='180' height='14' rx='7' fill='%23ffe7b3' fill-opacity='.8'/%3E%3Crect x='80' y='228' width='140' height='10' rx='5' fill='%23ffe7b3' fill-opacity='.45'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.7'%3E%3Crect x='340' y='90' width='220' height='12' rx='6'/%3E%3Crect x='340' y='120' width='160' height='10' rx='5' fill-opacity='.4'/%3E%3C/g%3E%3Cg stroke='%23ffb703' stroke-width='2' fill='none' stroke-opacity='.6'%3E%3Ccircle cx='470' cy='230' r='52'/%3E%3Cpath d='M470 178 L470 230 L508 254'/%3E%3C/g%3E%3C/svg%3E" alt="生活方式视频封面：暖色深夜食堂场景与时钟图形" width="640" height="360" loading="lazy">
+            <span class="bao-vtime">09:57</span>
+            <span class="bao-vcard-play" aria-hidden="true"><i>▶</i></span>
+          </figure>
+          <div class="bao-vbody">
+            <h3>凌晨两点还亮着灯的那家小店</h3>
+            <p>我们坐在角落拍了两晚，记录下 7 位客人和 1 位老板的对话，没有采访提纲。</p>
+            <div class="bao-tags"><span class="bao-tag">生活方式</span><span class="bao-tag">治愈影像</span></div>
+            <div class="bao-vfoot">
+              <span class="bao-author"><span class="bao-ava" style="background:#ff8f6b">夜</span>夜行镜头</span>
+              <button class="bao-act" type="button" data-like="4380"><span class="bao-heart">♥</span><b data-like-num>4380</b></button>
+              <button class="bao-act" type="button" data-fav="1"><span class="bao-heart">☆</span></button>
+              <button class="bao-act" type="button" data-share="凌晨两点还亮着灯的那家小店">🔗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bao-vcard" data-cat="幕后">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v5' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a2f4a'/%3E%3Cstop offset='1' stop-color='%23111623'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v5)'/%3E%3Cg fill='none' stroke='%238b7cff' stroke-width='2.4' stroke-opacity='.8'%3E%3Crect x='60' y='70' width='180' height='220' rx='10'/%3E%3Crect x='260' y='110' width='140' height='140' rx='10'/%3E%3Crect x='420' y='140' width='160' height='110' rx='10'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.24'%3E%3Crect x='82' y='96' width='110' height='9' rx='4.5'/%3E%3Crect x='82' y='116' width='80' height='8' rx='4'/%3E%3Crect x='282' y='136' width='80' height='8' rx='4'/%3E%3Crect x='442' y='166' width='100' height='8' rx='4'/%3E%3C/g%3E%3Cpath d='M206 250 L246 250 L246 290 L206 290 Z' fill='%233ff0c4' fill-opacity='.6'/%3E%3C/svg%3E" alt="创作幕后视频封面：分镜板与剪辑时间线示意图" width="640" height="360" loading="lazy">
+            <span class="bao-vtime">18:44</span>
+            <span class="bao-vcard-play" aria-hidden="true"><i>▶</i></span>
+          </figure>
+          <div class="bao-vbody">
+            <h3>一条 90 秒视频的 11 个小时</h3>
+            <p>从选题会到成片导出的全流程记录，包括被删掉的 4 个版本和一次失败的补拍。</p>
+            <div class="bao-tags"><span class="bao-tag">创作幕后</span><span class="bao-tag">教程干货</span></div>
+            <div class="bao-vfoot">
+              <span class="bao-author"><span class="bao-ava" style="background:#8b7cff">剪</span>剪辑室不打烊</span>
+              <button class="bao-act" type="button" data-like="3260"><span class="bao-heart">♥</span><b data-like-num>3260</b></button>
+              <button class="bao-act" type="button" data-fav="1"><span class="bao-heart">☆</span></button>
+              <button class="bao-act" type="button" data-share="一条90秒视频的11个小时">🔗</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="bao-vcard" data-cat="生活">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='v6' x1='1' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23324c3e'/%3E%3Cstop offset='1' stop-color='%23141d1c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23v6)'/%3E%3Cg fill='%239ad7a8' fill-opacity='.32'%3E%3Ccircle cx='140' cy='150' r='70'/%3E%3Ccircle cx='230' cy='200' r='48'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.7'%3E%3Crect x='320' y='100' width='220' height='12' rx='6'/%3E%3Crect x='320' y='130' width='170' height='10' rx='5' fill-opacity='.42'/%3E%3Crect x='320' y='156' width='200' height='10' rx='5' fill-opacity='.32'/%3E%3C/g%3E%3Cg%3E%3Crect x='320' y='210' width='120' height='30' rx='15' fill='%233ff0c4' fill-opacity='.85'/%3E%3Crect x='456' y='210' width='90' height='30' rx='15' fill='%23ffffff' fill-opacity='.14'/%3E%3C/g%3E%3C/svg%3E" alt="生活方式视频封面：绿色植物图形与轻食摊位画面示意" width="640" height="360" loading="lazy">
+            <span class="bao-vtime">07:36</span>
+            <span class="bao-vcard-play" aria-hidden="true"><i>▶</i></span>
+          </figure>
+          <div class="bao-vbody">
+            <h3>周末市集摆摊日记：从备料算账到收摊落日</h3>
+            <p>一个手作摊主的完整一天，把成本、客流与真实收入都摊开说了。</p>
+            <div class="bao-tags"><span class="bao-tag">生活方式</span><span class="bao-tag">手作DIY</span></div>
+            <div class="bao-vfoot">
+              <span class="bao-author"><span class="bao-ava" style="background:#9ad7a8">摊</span>市集日记本</span>
+              <button class="bao-act" type="button" data-like="2890"><span class="bao-heart">♥</span><b data-like-num>2890</b></button>
+              <button class="bao-act" type="button" data-fav="1"><span class="bao-heart">☆</span></button>
+              <button class="bao-act" type="button" data-share="周末市集摆摊日记">🔗</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 品牌故事 + 关键词解析 -->
+  <section class="bao-sec" id="baoStory" aria-labelledby="baoStoryTitle">
+    <div class="bao-wrap">
+      <div class="bao-sec-head">
+        <div>
+          <span class="bao-sec-label">BRAND STORY</span>
+          <h2 id="baoStoryTitle">品牌故事：把<b>每日吃瓜</b>做成一件正经事</h2>
+          <p>从一个人的随手记录，到 486 位创作者的日常协作，我们花了很长时间回答一个问题：围观如何更负责。</p>
+        </div>
+      </div>
+
+      <div class="bao-story-grid">
+        <figure class="bao-story-figure">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 800'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%231b2b45'/%3E%3Cstop offset='.6' stop-color='%23121c2e'/%3E%3Cstop offset='1' stop-color='%230c1320'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='800' fill='url(%23s1)'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.1'%3E%3Cpath d='M60 0 V800'/%3E%3Cpath d='M150 0 V800'/%3E%3Cpath d='M240 0 V800'/%3E%3Cpath d='M330 0 V800'/%3E%3Cpath d='M420 0 V800'/%3E%3Cpath d='M510 0 V800'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='300' cy='250' r='110' fill='none' stroke='%233ff0c4' stroke-width='2' stroke-opacity='.55'/%3E%3Ccircle cx='300' cy='250' r='70' fill='%233ff0c4' fill-opacity='.14'/%3E%3Cpath d='M278 222 L336 250 L278 278 Z' fill='%233ff0c4'/%3E%3C/g%3E%3Cg fill='%23ffffff'%3E%3Crect x='90' y='450' width='300' height='14' rx='7' fill-opacity='.82'/%3E%3Crect x='90' y='486' width='220' height='11' rx='5.5' fill-opacity='.4'/%3E%3Crect x='90' y='514' width='260' height='11' rx='5.5' fill-opacity='.28'/%3E%3Crect x='90' y='560' width='150' height='34' rx='17' fill='%23ffb703' fill-opacity='.9'/%3E%3C/g%3E%3Cg fill='%23ff4d5e' fill-opacity='.7'%3E%3Ccircle cx='470' cy='600' r='22'/%3E%3Ccircle cx='430' cy='660' r='12'/%3E%3C/g%3E%3C/svg%3E" alt="91爆料网每日吃瓜品牌故事配图：竖版深色品牌理念视觉与播放符号" width="600" height="800" loading="lazy">
+          <figcaption>品牌视觉语言：以深色底与荧光色标记“可核实的信息点”</figcaption>
+        </figure>
+
+        <div class="bao-article">
+          <h3>关键词解析之一：什么是“每日吃瓜”式的内容生产</h3>
+          <p>在 91爆料网每日吃瓜的语境里，“吃瓜”不是一个轻飘飘的词。它描述的是普通人对身边新鲜事、公共讨论和流行现象的好奇心。企业成立之初，我们把每天散落在各类平台上的碎片视频逐条归档，建立了一套包含时间、地点、信源、在场者、后续处理五要素的结构化记录表。每一条被收入“每日吃瓜”栏目的内容，都必须先完成这张表，才有资格进入剪辑与发布流程。这套笨办法让我们在两年内积累了超过 4 万条可回溯的素材记录，也让“每日吃瓜”从一个调侃式说法，逐渐变成一套可以被检查的工作方法。</p>
+          <p>我们坚持一件事：<strong>先确认事实，再谈观点</strong>。编辑组内部把内容分为“已核实”“待补充”“仅记录”三档，不同档位对应不同的展示方式和提示语。用户看到的每一条视频下方，都会标注信源数量与核查等级。这不是为了显得专业，而是因为围观本身会产生影响——当事人的生活、旁观者的判断、品牌的信誉，都在这条链路上。</p>
+
+          <h3>关键词解析之二：每日更新的内容节奏如何保持品质</h3>
+          <p>每日更新意味着持续的压力。我们的排期是“早会定题、午间采编、傍晚剪辑、夜间复核”，四个环节环环相扣。选题会上，编导需要说明三件事：这条内容为什么值得今天看、画面能提供什么文字给不了的证据、如果核查失败备选方案是什么。落选题目不会被丢掉，而是进入“热点观察池”，等待更多信源出现。这种机制让团队在追热点时不至于被流量牵着走，也避免了同一题材的重复堆叠。</p>
+          <p>在品质管理上，我们设置了三条硬线：不发布无法确认来源的关键画面；不对未成年人、普通当事人进行可识别呈现；不在事实不明时使用带有定性倾向的标题。创作者社区同样适用这套规则，签约作者投稿需经过双重审核，社区用户上传则由系统初筛加人工抽检。很多创作者最初不理解，觉得限制太多，但一段时间后他们发现，<em>可核实的内容生命周期更长</em>，二次传播与商业合作也更稳定。</p>
+          <div class="bao-quote">“我们不追求第一时间，只追求第一手。晚十分钟没关系，讲错了才真正失去信任。”——编辑部内部工作手记</div>
+
+          <h3>关键词解析之三：创作者社区与内容生态的共生关系</h3>
+          <p>一个视频品牌的生命力不在编辑室，而在社区。91爆料网每日吃瓜目前有 486 位签约与社区创作者，覆盖城市现场、人物访谈、行业观察、生活方式、创作幕后等方向。我们为创作者提供三类支持：素材与信源共享库、基础拍摄与剪辑培训、以及基于内容质量的流量分发。新人期最重要的不是爆款，而是形成稳定的选题判断与拍摄习惯。因此平台设置了“新人成长路径”，从 3 条练习作品开始，逐步解锁专题合作与商业项目。</p>
+          <p>内容生态的健康度，最终体现在讨论氛围上。评论区采取分级管理：事实讨论优先展示，情绪化争吵折叠提醒，涉及个人隐私的内容一律拦截。我们也公开了部分社区治理数据，包括每月处理的举报数量、申诉结果与规则调整说明，让用户知道规则不是黑箱。正是这些看起来琐碎的工作，让“每日吃瓜”这件事有了持续的社区活力，也让品牌在行业里获得了相对稳定的口碑。</p>
+          <p>接下来，我们会继续在垂直领域深耕：一方面扩充城市现场的在地拍摄网络，让更多小城市、小社区的故事被看见；另一方面推进“核查公开课”计划，把内容核实的方法开放给更多创作者与企业伙伴。我们相信，好奇心值得被认真对待，而认真，是内容品牌最长期的力量。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4b 专题企划 -->
+  <section class="bao-sec" id="baoTopic" aria-labelledby="baoTopicTitle">
+    <div class="bao-wrap">
+      <div class="bao-sec-head">
+        <div>
+          <span class="bao-sec-label">SERIES</span>
+          <h2 id="baoTopicTitle">专题企划：<b>每日吃瓜</b>的三条长期内容线</h2>
+          <p>长期专题是品牌内容的骨架。每个专题由固定编导带队，按周更新，并开放社区共创名额。</p>
+        </div>
+      </div>
+      <div class="bao-topic-grid">
+        <article class="bao-topic">
+          <div class="bao-topic-top">
+            <span class="bao-topic-icon" style="background:rgba(63,240,196,.16);color:#3ff0c4">城</span>
+            <span class="bao-status doing">更新中 · 第 19 期</span>
+          </div>
+          <h3>城市现场 100 小时</h3>
+          <p>把镜头交给一座城市的普通一天，记录那些只有当地人才知道的细节与节奏。</p>
+          <ul>
+            <li>菜市场凌晨四点的第一批进货</li>
+            <li>老城区最后一班公交的乘客</li>
+            <li>社区修鞋摊与他的常客们</li>
+          </ul>
+        </article>
+        <article class="bao-topic">
+          <div class="bao-topic-top">
+            <span class="bao-topic-icon" style="background:rgba(255,77,94,.16);color:#ff4d5e">核</span>
+            <span class="bao-status doing">更新中 · 第 12 期</span>
+          </div>
+          <h3>核查公开课</h3>
+          <p>把内容核实的方法讲清楚：怎么找信源、怎么交叉验证、怎么判断画面是否被剪辑。</p>
+          <ul>
+            <li>三段视频如何拼出完整时间线</li>
+            <li>截图传播中的常见失真类型</li>
+            <li>创作者可复用的核查清单模板</li>
+          </ul>
+        </article>
+        <article class="bao-topic">
+          <div class="bao-topic-top">
+            <span class="bao-topic-icon" style="background:rgba(255,183,3,.18);color:#ffb703">人</span>
+            <span class="bao-status">预告 · 12 月上线</span>
+          </div>
+          <h3>被看见的人</h3>
+          <p>采访那些因为一条视频被短暂关注的人，聊聊热度退去之后的生活。</p>
+          <ul>
+            <li>小店老板的三个月后回访</li>
+            <li>一位普通人的镜头适应过程</li>
+            <li>当围观散去，他们想说什么</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 -->
+  <section class="bao-sec" id="baoAuthors" aria-labelledby="baoAuthorsTitle">
+    <div class="bao-wrap">
+      <div class="bao-sec-head">
+        <div>
+          <span class="bao-sec-label">CREATORS</span>
+          <h2 id="baoAuthorsTitle">创作者矩阵：<b>每日吃瓜</b>背后的六双手</h2>
+          <p>点击作者卡片上的“资料”可查看完整简介与合作信息。所有创作者均通过平台内容规范培训。</p>
+        </div>
+      </div>
+      <div class="bao-author-grid">
+        <article class="bao-author-card">
+          <span class="bao-author-ava" style="background:linear-gradient(135deg,#3ff0c4,#1e9c83)">瓜</span>
+          <div>
+            <h3>瓜田观察员 <button type="button" data-author="瓜田观察员|城市现场 · 事实核查|156|382000|前纸媒调查记者，现专注城市现场记录与事件时间线重建。擅长在碎片画面中寻找关键帧，主张“把镜头对准过程而不是结论”。累计完成 40 余次热点事件核查，作品以克制、清晰、可回溯著称。">资料</button></h3>
+            <div class="bao-author-field">城市现场 · 事实核查</div>
+            <p>前纸媒调查记者，现专注城市现场记录与事件时间线重建。擅长在碎片画面中寻找关键帧，主张“把镜头对准过程而不是结论”。</p>
+            <div class="bao-author-nums"><span>作品 <b>156</b></span><span>粉丝 <b>38.2 万</b></span></div>
+          </div>
+        </article>
+        <article class="bao-author-card">
+          <span class="bao-author-ava" style="background:linear-gradient(135deg,#8b7cff,#5b49d6)">镜</span>
+          <div>
+            <h3>镜前十分钟 <button type="button" data-author="镜前十分钟|人物访谈 · 深度对话|89|264000|访谈类创作者，习惯用长时间对话换取真实表达。制作过《凌晨三点的守夜人》《一位审核员的 800 条视频》等作品，擅长在沉默处停留，把受访者的停顿保留在成片里。">资料</button></h3>
+            <div class="bao-author-field">人物访谈 · 深度对话</div>
+            <p>访谈类创作者，习惯用长时间对话换取真实表达。制作过《凌晨三点的守夜人》《一位审核员的 800 条视频》等作品，擅长在沉默处停留。</p>
+            <div class="bao-author-nums"><span>作品 <b>89</b></span><span>粉丝 <b>26.4 万</b></span></div>
+          </div>
+        </article>
+        <article class="bao-author-card">
+          <span class="bao-author-ava" style="background:linear-gradient(135deg,#ffb703,#d18b00)">数</span>
+          <div>
+            <h3>数据瓜农 <button type="button" data-author="数据瓜农|行业观察 · 数据可视化|112|197000|数据新闻方向的视频创作者，善于把抽象的分发机制画成普通人看得懂的图。每期视频附公开数据来源与计算口径，评论区常见同行讨论。">资料</button></h3>
+            <div class="bao-author-field">行业观察 · 数据可视化</div>
+            <p>数据新闻方向的视频创作者，善于把抽象的分发机制画成普通人看得懂的图。每期视频附公开数据来源与计算口径。</p>
+            <div class="bao-author-nums"><span>作品 <b>112</b></span><span>粉丝 <b>19.7 万</b></span></div>
+          </div>
+        </article>
+        <article class="bao-author-card">
+          <span class="bao-author-ava" style="background:linear-gradient(135deg,#ff8f6b,#d95f3c)">夜</span>
+          <div>
+            <h3>夜行镜头 <button type="button" data-author="夜行镜头|生活方式 · 治愈影像|74|143000|常在夜里出门拍摄，镜头里多是便利店、小吃摊与加班人群。作品几乎没有解说，靠环境声与自然光叙事，被观众称为“最适合深夜看的频道”。">资料</button></h3>
+            <div class="bao-author-field">生活方式 · 治愈影像</div>
+            <p>常在夜里出门拍摄，镜头里多是便利店、小吃摊与加班人群。作品几乎没有解说，靠环境声与自然光叙事。</p>
+            <div class="bao-author-nums"><span>作品 <b>74</b></span><span>粉丝 <b>14.3 万</b></span></div>
+          </div>
+        </article>
+        <article class="bao-author-card">
+          <span class="bao-author-ava" style="background:linear-gradient(135deg,#9ad7a8,#4f9d64)">城</span>
+          <div>
+            <h3>城市切片 <button type="button" data-author="城市切片|在地文化 · 城市探索|63|98000|两人小团队，专门拍摄菜市场、老社区与即将消失的街巷。坚持每条视频只讲一个地点，让观众看完能说出那里的路名。">资料</button></h3>
+            <div class="bao-author-field">在地文化 · 城市探索</div>
+            <p>两人小团队，专门拍摄菜市场、老社区与即将消失的街巷。坚持每条视频只讲一个地点，让观众看完能说出那里的路名。</p>
+            <div class="bao-author-nums"><span>作品 <b>63</b></span><span>粉丝 <b>9.8 万</b></span></div>
+          </div>
+        </article>
+        <article class="bao-author-card">
+          <span class="bao-author-ava" style="background:linear-gradient(135deg,#6cb6ff,#2e78c9)">剪</span>
+          <div>
+            <h3>剪辑室不打烊 <button type="button" data-author="剪辑室不打烊|创作幕后 · 教程干货|138|221000|剪辑师出身的创作者，专门拆解热门视频的结构与节奏。教程偏向可操作，常附工程文件思路与失败案例复盘，被新人称为“避坑指南”。">资料</button></h3>
+            <div class="bao-author-field">创作幕后 · 教程干货</div>
+            <p>剪辑师出身的创作者，专门拆解热门视频的结构与节奏。教程偏向可操作，常附工程文件思路与失败案例复盘。</p>
+            <div class="bao-author-nums"><span>作品 <b>138</b></span><span>粉丝 <b>22.1 万</b></span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 图文索引 -->
+  <section class="bao-sec" id="baoIndex" aria-labelledby="baoIndexTitle">
+    <div class="bao-wrap">
+      <div class="bao-sec-head">
+        <div>
+          <span class="bao-sec-label">INDEX</span>
+          <h2 id="baoIndexTitle">图文索引：<b>每日吃瓜</b>的四个轻阅读入口</h2>
+          <p>不想看长视频的时候，可以从这里快速了解当日值得留意的内容摘要与背后信息。</p>
+        </div>
+      </div>
+      <div class="bao-index-list">
+        <article class="bao-index-item">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Cdefs%3E%3ClinearGradient id='i1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232b4761'/%3E%3Cstop offset='1' stop-color='%23121928'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='360' fill='url(%23i1)'/%3E%3Cg fill='%233ff0c4' fill-opacity='.7'%3E%3Crect x='50' y='250' width='30' height='60'/%3E%3Crect x='96' y='210' width='30' height='100'/%3E%3Crect x='142' y='170' width='30' height='140'/%3E%3C/g%3E%3Cg fill='%23ff4d5e' fill-opacity='.85'%3E%3Crect x='260' y='90' width='170' height='14' rx='7'/%3E%3Crect x='260' y='120' width='120' height='10' rx='5' fill-opacity='.5'/%3E%3Crect x='260' y='148' width='150' height='10' rx='5' fill-opacity='.4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E" alt="图文索引配图：信息核查档案与柱状数据缩略图" width="480" height="360" loading="lazy">
+          </figure>
+          <div>
+            <h3>一份可下载的事件核查清单</h3>
+            <p>把编辑部内部使用的五要素记录表整理成公开版本，适合任何想认真追热点的创作者。</p>
+            <div class="bao-meta"><span>攻略 · 阅读 4 分钟</span><span>2026-11-21</span></div>
+          </div>
+        </article>
+        <article class="bao-index-item">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Cdefs%3E%3ClinearGradient id='i2' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23442f46'/%3E%3Cstop offset='1' stop-color='%23171c2a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='360' fill='url(%23i2)'/%3E%3Ccircle cx='150' cy='150' r='56' fill='%23ffb703' fill-opacity='.4'/%3E%3Ccircle cx='150' cy='140' r='26' fill='%23ffe7b3' fill-opacity='.8'/%3E%3Cg fill='%23ffffff' fill-opacity='.7'%3E%3Crect x='250' y='120' width='170' height='12' rx='6'/%3E%3Crect x='250' y='150' width='130' height='9' rx='4.5' fill-opacity='.4'/%3E%3Crect x='250' y='174' width='150' height='9' rx='4.5' fill-opacity='.3'/%3E%3C/g%3E%3C/svg%3E" alt="图文索引配图：人物访谈速记与暖色人物剪影缩略图" width="480" height="360" loading="lazy">
+          </figure>
+          <div>
+            <h3>访谈速记：热度退去后的第 90 天</h3>
+            <p>我们回访了三位曾经被广泛关注过的普通人，记录他们如何重新适应安静的生活。</p>
+            <div class="bao-meta"><span>人物访谈 · 阅读 7 分钟</span><span>2026-11-20</span></div>
+          </div>
+        </article>
+        <article class="bao-index-item">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Cdefs%3E%3ClinearGradient id='i3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23243f38'/%3E%3Cstop offset='1' stop-color='%2310181c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='360' fill='url(%23i3)'/%3E%3Cg stroke='%239ad7a8' stroke-width='3' fill='none' stroke-opacity='.7'%3E%3Cpath d='M60 260 C140 200 220 280 300 190 S400 150 430 120'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.22'%3E%3Crect x='60' y='70' width='140' height='10' rx='5'/%3E%3Crect x='60' y='94' width='100' height='8' rx='4'/%3E%3C/g%3E%3Cg fill='%233ff0c4'%3E%3Ccircle cx='300' cy='190' r='7'/%3E%3Ccircle cx='430' cy='120' r='7'/%3E%3C/g%3E%3C/svg%3E" alt="图文索引配图：绿色调数据趋势与内容生态缩略图" width="480" height="360" loading="lazy">
+          </figure>
+          <div>
+            <h3>内容生态月报：11 月创作者观察</h3>
+            <p>本月新增创作者 32 位，城市现场类内容增长明显。报告包含选题分布、互动结构与治理说明。</p>
+            <div class="bao-meta"><span>行业观察 · 阅读 5 分钟</span><span>2026-11-18</span></div>
+          </div>
+        </article>
+        <article class="bao-index-item">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360'%3E%3Cdefs%3E%3ClinearGradient id='i4' x1='1' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233f3a58'/%3E%3Cstop offset='1' stop-color='%23151a27'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='360' fill='url(%23i4)'/%3E%3Cg fill='none' stroke='%238b7cff' stroke-width='2.5' stroke-opacity='.8'%3E%3Crect x='60' y='90' width='150' height='180' rx='10'/%3E%3Crect x='240' y='130' width='180' height='140' rx='10'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='.3'%3E%3Crect x='82' y='116' width='90' height='9' rx='4.5'/%3E%3Crect x='82' y='138' width='70' height='8' rx='4'/%3E%3Crect x='262' y='156' width='110' height='8' rx='4'/%3E%3C/g%3E%3Cg fill='%23ffb703' fill-opacity='.8'%3E%3Crect x='262' y='200' width='80' height='26' rx='13'/%3E%3C/g%3E%3C/svg%3E" alt="图文索引配图：紫色调分镜板与剪辑方案缩略图" width="480" height="360" loading="lazy">
+          </figure>
+          <div>
+            <h3>新手剪辑常见的五个节奏问题</h3>
+            <p>从开场三秒到结尾留白，用具体案例说明为什么有些视频“看起来没错但就是不好看”。</p>
+            <div class="bao-meta"><span>教程干货 · 阅读 6 分钟</span><span>2026-11-16</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6b 社区口碑 双列短评 -->
+  <section class="bao-sec" id="baoComments" aria-labelledby="baoCommentsTitle">
+    <div class="bao-wrap">
+      <div class="bao-sec-head">
+        <div>
+          <span class="bao-sec-label">COMMUNITY</span>
+          <h2 id="baoCommentsTitle">社区口碑：来自<b>每日吃瓜</b>用户的八条真实反馈</h2>
+          <p>评论来自站内活动与日常反馈渠道，已获授权展示。我们保留不同意见，也持续改进被指出的问题。</p>
+        </div>
+        <button class="bao-btn bao-btn-ghost" type="button" data-modal="baoModalSubmit">我也想说两句</button>
+      </div>
+      <div class="bao-cmt-grid">
+        <article class="bao-cmt">
+          <div class="bao-cmt-head"><span class="bao-ava" style="background:#3ff0c4">林</span><b>林间有风</b><small>2 小时前</small></div>
+          <p>最打动我的是那条“时间线还原”。以前刷到这种现场视频，只会跟着情绪走，看完你们的核查版才发现自己漏了太多信息。希望多做这类内容，哪怕更新慢一点。</p>
+          <span class="bao-stars">★★★★★</span>
+        </article>
+        <article class="bao-cmt">
+          <div class="bao-cmt-head"><span class="bao-ava" style="background:#ffb703">阿</span><b>阿柚不加冰</b><small>5 小时前</small></div>
+          <p>作为小城市的创作者，能在这里看到自己拍的菜市场被推荐，真的很有成就感。社区对新人的流量扶持是实打实的，不是画饼。</p>
+          <span class="bao-stars">★★★★★</span>
+        </article>
+        <article class="bao-cmt">
+          <div class="bao-cmt-head"><span class="bao-ava" style="background:#8b7cff">周</span><b>周更失败者</b><small>昨天</small></div>
+          <p>剪辑教程那期我反复看了三遍，尤其是“被删掉的四个版本”部分，比我上过的付费课还具体。唯一建议是能不能出个文字版方便做笔记。</p>
+          <span class="bao-stars">★★★★☆</span>
+        </article>
+        <article class="bao-cmt">
+          <div class="bao-cmt-head"><span class="bao-ava" style="background:#ff4d5e">陈</span><b>陈小满</b><small>昨天</small></div>
+          <p>审核员的访谈让我印象很深。以前总觉得平台审核是冷冰冰的机器，看完才知道背后有具体的人在权衡。这种内容很值得被更多人看到。</p>
+          <span class="bao-stars">★★★★★</span>
+        </article>
+        <article class="bao-cmt">
+          <div class="bao-cmt-head"><span class="bao-ava" style="background:#6cb6ff">木</span><b>木木不熬夜</b><small>2 天前</small></div>
+          <p>提个小意见：专题页的更新状态有时候和实际不同步，上周看到“更新中”点进去还是旧内容。客服回应挺快，第二天就修正了，态度加分。</p>
+          <span class="bao-stars">★★★☆☆</span>
+        </article>
+        <article class="bao-cmt">
+          <div class="bao-cmt-head"><span class="bao-ava" style="background:#9ad7a8">小</span><b>小城放映员</b><small>3 天前</small></div>
+          <p>很喜欢“城市现场 100 小时”这个系列。没有煽情配乐，没有夸张标题，就是安安静静记录一条街的日常。看完会想出门走走。</p>
+          <span class="bao-stars">★★★★★</span>
+        </article>
+        <article class="bao-cmt">
+          <div class="bao-cmt-head"><span class="bao-ava" style="background:#ff8f6b">夜</span><b>夜班便利店</b><small>4 天前</small></div>
+          <p>深夜小店那条视频我看了两遍。作为同样上夜班的人，那种“有人还醒着”的感觉特别真实。感谢你们没有把它拍成苦情戏。</p>
+          <span class="bao-stars">★★★★★</span>
+        </article>
+        <article class="bao-cmt">
+          <div class="bao-cmt-head"><span class="bao-ava" style="background:#d18b00">老</span><b>老范看热闹</b><small>5 天前</small></div>
+          <p>评论区的管理确实比同类平台克制，讨论事实的能留下，上来就骂人的会被折叠。虽然有时候觉得管得多，但整体氛围确实更干净。</p>
+          <span class="bao-stars">★★★★☆</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 辅助区：企业动态 + FAQ -->
+  <section class="bao-sec" id="baoFaq" aria-labelledby="baoAuxTitle">
+    <div class="bao-wrap">
+      <div class="bao-sec-head">
+        <div>
+          <span class="bao-sec-label">SERVICE</span>
+          <h2 id="baoAuxTitle">企业动态与帮助中心</h2>
+          <p>官方发布、规则更新与常见问题都在这里。如有未覆盖的问题，可通过页脚联系方式反馈。</p>
+        </div>
+      </div>
+      <div class="bao-aux-grid">
+        <div class="bao-panel">
+          <h3>企业动态</h3>
+          <p class="bao-sub">官方发布与内容更新记录</p>
+          <div class="bao-timeline">
+            <div class="bao-tl-item">
+              <time>11-21</time>
+              <div class="bao-tl-dot"></div>
+              <div><b>创作者激励计划第三季开放报名</b><span>面向城市现场与人物访谈方向，提供拍摄补贴与流量扶持，报名截止 12 月 5 日。</span></div>
+            </div>
+            <div class="bao-tl-item">
+              <time>11-18</time>
+              <div class="bao-tl-dot"></div>
+              <div><b>《爆料内容核实与合规手册》2026 修订版发布</b><span>新增画面溯源与当事人隐私保护章节，全部创作者需完成线上学习。</span></div>
+            </div>
+            <div class="bao-tl-item">
+              <time>11-12</time>
+              <div class="bao-tl-dot"></div>
+              <div><b>社区治理月度数据公开</b><span>本月处理举报 1,428 条，申诉通过 63 条，规则调整说明同步更新。</span></div>
+            </div>
+            <div class="bao-tl-item">
+              <time>11-06</time>
+              <div class="bao-tl-dot"></div>
+              <div><b>“城市现场”在地拍摄网络新增 9 座城市</b><span>合作创作者可直接使用本地素材库与设备支持。</span></div>
+            </div>
+          </div>
+          <a class="bao-more-link" href="#baoFooter">全部企业动态 ›</a>
+        </div>
+
+        <div class="bao-panel bao-faq">
+          <h3>常见问题</h3>
+          <p class="bao-sub">关于投稿、审核与版权的六个高频问答</p>
+          <details>
+            <summary>如何向“每日吃瓜”栏目投稿？</summary>
+            <p>点击页头“我要投稿”填写表单，附上原始素材与基本信息（时间、地点、信源）。我们优先采用有完整现场记录、可回溯来源的内容，通常在 3 个工作日内给出初审反馈。</p>
+          </details>
+          <details>
+            <summary>视频审核一般需要多久？</summary>
+            <p>社区投稿为系统初筛加人工抽检，通常 24 小时内完成；签约创作者与专题内容执行编辑、法务双重复核，约 1 至 2 个工作日。涉及敏感事件的核查会更久，请预留时间。</p>
+          </details>
+          <details>
+            <summary>我的素材被使用了，如何确认署名与授权？</summary>
+            <p>所有采用素材均会与提供者签署授权说明，明确署名方式、使用范围与期限。成片发布前会提供预览确认。如发现未授权使用，可通过页脚邮箱提交申诉。</p>
+          </details>
+          <details>
+            <summary>平台对二次剪辑有什么要求？</summary>
+            <p>需保留原始出处，不得删除关键语境，不得通过剪辑制造原素材中不存在的事实关系。教育、评论类二次创作需标注观点归属，避免让观众误认为原始记录。</p>
+          </details>
+          <details>
+            <summary>可以申请加入创作者社区吗？</summary>
+            <p>可以。提交 1 至 3 条原创作品与选题方向说明即可。我们不设粉丝量门槛，更看重内容判断力与稳定更新能力。新人会获得选题辅导与拍摄基础培训。</p>
+          </details>
+          <details>
+            <summary>如何反馈内容问题或举报不实信息？</summary>
+            <p>每条内容页下方均有“反馈”入口，也可通过页脚联系方式提交。举报需尽量附上证据链接或原始素材，我们会在 48 小时内回应处理进度。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7b 合作与灵感 -->
+  <section class="bao-sec" id="baoPartner" aria-labelledby="baoPartnerTitle">
+    <div class="bao-wrap">
+      <div class="bao-sec-head">
+        <div>
+          <span class="bao-sec-label">PARTNER &amp; INSPIRATION</span>
+          <h2 id="baoPartnerTitle">合作品牌与创作灵感</h2>
+          <p>我们与内容机构、设备厂商、城市文化组织长期合作，共同推动更负责任的热点内容生产。</p>
+        </div>
+      </div>
+      <div class="bao-aux-grid">
+        <div class="bao-panel">
+          <h3>合作品牌 / 伙伴</h3>
+          <p class="bao-sub">内容共建、设备支持与城市文化合作</p>
+          <div class="bao-partner-row">
+            <div class="bao-partner"><b>城南影像社</b>内容共建</div>
+            <div class="bao-partner"><b>光禾设备</b>拍摄支持</div>
+            <div class="bao-partner"><b>旧城文化馆</b>在地合作</div>
+            <div class="bao-partner"><b>声场录音棚</b>声音制作</div>
+          </div>
+          <h3 style="margin-top:22px">创作灵感速取</h3>
+          <p class="bao-sub">给正在找选题的你三个可执行方向</p>
+          <div class="bao-timeline">
+            <div class="bao-tl-item">
+              <time>选题</time>
+              <div class="bao-tl-dot"></div>
+              <div><b>从一条评论出发</b><span>翻一条你熟悉的视频评论区，找 3 条互相矛盾的说法，去现场验证哪一条成立。</span></div>
+            </div>
+            <div class="bao-tl-item">
+              <time>拍摄</time>
+              <div class="bao-tl-dot"></div>
+              <div><b>只用一个固定机位</b><span>把机器放在同一个位置拍满 30 分钟，试着用后期剪出一条有起伏的短片。</span></div>
+            </div>
+            <div class="bao-tl-item">
+              <time>标题</time>
+              <div class="bao-tl-dot"></div>
+              <div><b>写给没看过的人</b><span>标题里只保留最具体的一个动作或数字，删掉所有形容词再读一遍。</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="bao-panel">
+          <h3>内容准则摘要</h3>
+          <p class="bao-sub">平台与创作者共同遵守的四条底线</p>
+          <div class="bao-quote" style="margin-top:0">真实性优先：不为追求传播而省略关键语境；核查不通过，宁可不发。</div>
+          <ul style="display:flex;flex-direction:column;gap:11px;font-size:13.5px;color:#c3d1ea">
+            <li>▸ 尊重当事人：不对普通个人进行可识别呈现，不消费他人困境。</li>
+            <li>▸ 保护未成年人：涉及未成年人的内容一律做技术处理，并加强审核。</li>
+            <li>▸ 开放讨论：允许不同观点，但拦截人身攻击与未经核实的指控。</li>
+            <li>▸ 持续公开：定期公布治理数据与规则调整，接受社区监督。</li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px">
+            <button class="bao-btn bao-btn-primary" type="button" data-modal="baoModalSubmit">投稿 / 报名</button>
+            <button class="bao-btn bao-btn-ghost" type="button" data-modal="baoModalSub">订阅每日更新</button>
+            <button class="bao-btn bao-btn-ghost" type="button" data-share="91爆料网每日吃瓜官方网站">复制分享链接</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="bao-footer" id="baoFooter">
+  <div class="bao-wrap">
+    <div class="bao-foot-grid">
+      <div class="bao-foot-brand">
+        <a class="bao-brand" href="#baoT" aria-label="返回页面顶部">
+          <span class="bao-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="3" fill="#0b1220"/><path d="M4 18c3-4 13-4 16 0" stroke="#0b1220" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </span>
+          <span>
+            <span class="bao-brand-name">91爆料网<em>每日吃瓜</em></span>
+            <span class="bao-brand-sub">DAILY HOTVIDEO</span>
+          </span>
+        </a>
+        <p>91爆料网每日吃瓜官方网站。以企业级内容审核与创作者运营体系，持续生产可核实、有观点的原创视频，构建值得信赖的热点内容生态。</p>
+      </div>
+      <div class="bao-foot-col">
+        <h4>内容导航</h4>
+        <a href="#baoFocus">今日焦点追踪</a>
+        <a href="#baoVideos">视频专区</a>
+        <a href="#baoTopic">专题企划</a>
+        <a href="#baoIndex">图文索引</a>
+        <a href="#baoStory">品牌故事</a>
+      </div>
+      <div class="bao-foot-col">
+        <h4>社区与创作</h4>
+        <a href="#baoAuthors">创作者矩阵</a>
+        <a href="#baoComments">社区口碑</a>
+        <a href="#baoPartner">合作与灵感</a>
+        <a href="#baoFaq">常见问题</a>
+        <a href="#" data-modal="baoModalSubmit">投稿入口</a>
+      </div>
+      <div class="bao-foot-col">
+        <h4>关于与联系</h4>
+        <a href="#" data-modal="baoModalNews">企业动态</a>
+        <a href="#" data-modal="baoModalShare">分享与传播</a>
+        <a href="#" data-modal="baoModalSub">订阅每日瓜</a>
+        <a href="mailto:hello@example.com">投稿与合作邮箱</a>
+        <a href="#baoFaq">内容合规说明</a>
+      </div>
+    </div>
+    <div class="bao-foot-bottom">
+      <span>© 2026 91爆料网每日吃瓜 · 官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容审核备案号：京ICP备00000000号-1 · 网络文化经营许可证示例编号</span>
+      <span>本站内容均为原创或获授权发布，转载请注明出处</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="bao-top" id="baoTopBtn" type="button" aria-label="回到顶部">↑</button>
+
+<!-- Toast -->
+<div class="bao-toast" id="baoToast" role="status" aria-live="polite"></div>
+
+<!-- 投稿 / 报名 弹窗 -->
+<div class="bao-modal" id="baoModalSubmit" role="dialog" aria-modal="true" aria-labelledby="baoSubmitTitle">
+  <div class="bao-modal-card">
+    <button class="bao-modal-close" type="button" data-close aria-label="关闭">✕</button>
+    <h3 id="baoSubmitTitle">投稿 / 报名</h3>
+    <p class="bao-sub">提交你的现场素材或创作者申请，我们会在 3 个工作日内回复。</p>
+    <form class="bao-form" data-form="投稿">
+      <label>昵称
+        <input type="text" name="name" required placeholder="怎么称呼你">
+      </label>
+      <label>联系方式
+        <input type="text" name="contact" required placeholder="邮箱或社交账号">
+      </label>
+      <label>类型
+        <select name="type">
+          <option>现场素材投稿</option>
+          <option>创作者入驻申请</option>
+          <option>专题共创报名</option>
+          <option>企业合作咨询</option>
+        </select>
+      </label>
+      <label>内容简述
+        <textarea name="desc" rows="3" placeholder="时间、地点、素材概况与信源说明"></textarea>
+      </label>
+      <button class="bao-btn bao-btn-primary" type="submit">提交</button>
+    </form>
+  </div>
+</div>
+
+<!-- 订阅弹窗 -->
+<div class="bao-modal" id="baoModalSub" role="dialog" aria-modal="true" aria-labelledby="baoSubTitle">
+  <div class="bao-modal-card">
+    <button class="bao-modal-close" type="button" data-close aria-label="关闭">✕</button>
+    <h3 id="baoSubTitle">订阅每日瓜</h3>
+    <p class="bao-sub">每天一封精选邮件，只推送当日最值得看的 3 条内容与核查说明。</p>
+    <form class="bao-form" data-form="订阅">
+      <label>邮箱
+        <input type="email" name="email" required placeholder="you@example.com">
+      </label>
+      <label>关注方向
+        <select name="focus">
+          <option>城市现场</option>
+          <option>人物访谈</option>
+          <option>行业观察</option>
+          <option>生活方式</option>
+          <option>创作幕后</option>
+        </select>
+      </label>
+      <button class="bao-btn bao-btn-primary" type="submit">确认订阅</button>
+    </form>
+  </div>
+</div>
+
+<!-- 企业动态 弹窗 -->
+<div class="bao-modal" id="baoModalNews" role="dialog" aria-modal="true" aria-labelledby="baoNewsTitle">
+  <div class="bao-modal-card">
+    <button class="bao-modal-close" type="button" data-close aria-label="关闭">✕</button>
+    <h3 id="baoNewsTitle">最新公告与更新</h3>
+    <p class="bao-sub">官方发布汇总，按时间倒序排列。</p>
+    <div class="bao-timeline">
+      <div class="bao-tl-item">
+        <time>11-22</time><div class="bao-tl-dot"></div>
+        <div><b>「每日吃瓜·第 47 期」上线</b><span>收录 12 条原创追踪内容，含 3 条核查特别版。</span></div>
+      </div>
+      <div class="bao-tl-item">
+        <time>11-21</time><div class="bao-tl-dot"></div>
+        <div><b>创作者激励计划第三季报名</b><span>12 月 5 日截止，面向城市现场与人物访谈方向。</span></div>
+      </div>
+      <div class="bao-tl-item">
+        <time>11-19</time><div class="bao-tl-dot"></div>
+        <div><b>移动端视频专区改版</b><span>新增主题筛选与收藏状态记忆，加载速度优化。</span></div>
+      </div>
+      <div class="bao-tl-item">
+        <time>11-15</time><div class="bao-tl-dot"></div>
+        <div><b>评论区治理规则更新</b><span>明确折叠与提醒的适用场景，同步更新申诉入口。</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 分享弹窗 -->
+<div class="bao-modal" id="baoModalShare" role="dialog" aria-modal="true" aria-labelledby="baoShareTitle">
+  <div class="bao-modal-card">
+    <button class="bao-modal-close" type="button" data-close aria-label="关闭">✕</button>
+    <h3 id="baoShareTitle">分享内容</h3>
+    <p class="bao-sub" id="baoShareTip">选择分享方式，或复制页面链接发给朋友。</p>
+    <div class="bao-share-row">
+      <button class="bao-share-btn" type="button" data-share-channel="微信">微信</button>
+      <button class="bao-share-btn" type="button" data-share-channel="微博">微博</button>
+      <button class="bao-share-btn" type="button" data-share-channel="QQ">QQ</button>
+      <button class="bao-share-btn" type="button" data-share-channel="复制链接">复制链接</button>
+    </div>
+  </div>
+</div>
+
+<!-- 作者资料弹窗 -->
+<div class="bao-modal" id="baoModalAuthor" role="dialog" aria-modal="true" aria-labelledby="baoAuthorTitle">
+  <div class="bao-modal-card bao-author-modal">
+    <button class="bao-modal-close" type="button" data-close aria-label="关闭">✕</button>
+    <span class="bao-ava" id="baoAuthorAva">作</span>
+    <h3 id="baoAuthorTitle">创作者资料</h3>
+    <p class="bao-sub" id="baoAuthorField"></p>
+    <p id="baoAuthorBio"></p>
+    <p class="bao-sub" id="baoAuthorNums" style="margin-top:12px"></p>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var $ = function(s,root){return (root||document).querySelector(s);};
+  var $$ = function(s,root){return Array.prototype.slice.call((root||document).querySelectorAll(s));};
+
+  /* ---------- Toast ---------- */
+  var toastEl = $("#baoToast");
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){toastEl.classList.remove("show");},2200);
+  }
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = $("#baoBurger");
+  var mobileNav = $("#baoMobileNav");
+  burger.addEventListener("click", function(){
+    var open = mobileNav.classList.toggle("open");
+    burger.setAttribute("aria-expanded", open ? "true":"false");
+    burger.textContent = open ? "✕" : "☰";
+  });
+  $$("#baoMobileNav a").forEach(function(a){
+    a.addEventListener("click", function(){
+      mobileNav.classList.remove("open");
+      burger.setAttribute("aria-expanded","false");
+      burger.textContent = "☰";
+    });
+  });
+
+  /* ---------- 搜索 ---------- */
+  var searchInput = $("#baoSearchInput");
+  var searchBtn = $("#baoSearchBtn");
+  var videoCards = $$("#baoVideoGrid .bao-vcard");
+  function doSearch(){
+    var kw = searchInput.value.trim();
+    if(!kw){
+      videoCards.forEach(function(c){c.style.display="";});
+      toast("请输入关键词，如“城市现场”“访谈”“核查”");
+      return;
+    }
+    var hit = 0;
+    videoCards.forEach(function(c){
+      var txt = c.textContent;
+      var ok = txt.indexOf(kw) !== -1;
+      c.style.display = ok ? "" : "none";
+      if(ok) hit++;
+    });
+    toast(hit ? "找到 " + hit + " 条与“" + kw + "”相关的内容" : "暂时没有匹配内容，换个词试试？");
+    if(hit) document.getElementById("baoVideos").scrollIntoView({behavior:"smooth",block:"start"});
+  }
+  searchBtn.addEventListener("click", doSearch);
+  searchInput.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){ e.preventDefault(); doSearch(); }
+  });
+  searchInput.addEventListener("input", function(){
+    if(!searchInput.value.trim()){
+      videoCards.forEach(function(c){c.style.display="";});
+    }
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  $$("#baoFilterBar .bao-filter").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      $$("#baoFilterBar .bao-filter").forEach(function(b){b.classList.remove("active");});
+      btn.classList.add("active");
+      var f = btn.getAttribute("data-filter");
+      var shown = 0;
+      videoCards.forEach(function(c){
+        var ok = (f === "all") || (c.getAttribute("data-cat") === f);
+        c.style.display = ok ? "" : "none";
+        if(ok) shown++;
+      });
+      toast("已筛选出 " + shown + " 条内容");
+    });
+  });
+
+  /* ---------- 点赞 ---------- */
+  $$("[data-like]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var numEl = btn.querySelector("[data-like-num]");
+      var base = parseInt(btn.getAttribute("data-like"),10) || 0;
+      var cur = numEl ? (numEl.getAttribute("data-cur") ? parseInt(numEl.getAttribute("data-cur"),10) : base) : base;
+      var on = btn.classList.toggle("on");
+      var next = on ? cur + 1 : base;
+      if(numEl){
+        numEl.setAttribute("data-cur", next);
+        numEl.textContent = next >= 10000 ? (next/10000).toFixed(2) + "万" : next;
+      }
+      toast(on ? "已点赞，感谢支持" : "已取消点赞");
+    });
+  });
+
+  /* ---------- 收藏 ---------- */
+  $$("[data-fav]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var on = btn.classList.toggle("on");
+      var heart = btn.querySelector(".bao-heart");
+      if(heart) heart.textContent = on ? "★" : "☆";
+      toast(on ? "已加入收藏，稍后可在个人中心查看" : "已取消收藏");
+    });
+  });
+
+  /* ---------- 分享 ---------- */
+  var shareModal = $("#baoModalShare");
+  var shareTip = $("#baoShareTip");
+  var currentShareTitle = "91爆料网每日吃瓜官方网站";
+  function openShare(title){
+    if(title) currentShareTitle = title;
+    shareTip.textContent = "正在分享：" + currentShareTitle;
+    openModal(shareModal);
+  }
+  $$("[data-share]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      openShare(btn.getAttribute("data-share") || "91爆料网每日吃瓜官方网站");
+    });
+  });
+  $$("[data-share-channel]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var ch = b.getAttribute("data-share-channel");
+      if(ch === "复制链接"){
+        copyLink();
+      }else{
+        toast("已生成" + ch + "分享卡片，可在新窗口继续操作");
+      }
+      closeModal(shareModal);
+    });
+  });
+  function copyLink(){
+    var text = currentShareTitle + " — 91爆料网每日吃瓜官方网站";
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        toast("链接已复制，快去分享给朋友吧");
+      }).catch(function(){
+        legacyCopy(text);
+      });
+    }else{
+      legacyCopy(text);
+    }
+  }
+  function legacyCopy(text){
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand("copy"); toast("链接已复制，快去分享给朋友吧"); }
+    catch(e){ toast("复制失败，请手动选择内容复制"); }
+    document.body.removeChild(ta);
+  }
+
+  /* ---------- 弹窗通用 ---------- */
+  var lastFocus = null;
+  function openModal(el){
+    lastFocus = document.activeElement;
+    el.classList.add("open");
+    document.body.style.overflow = "hidden";
+    var closeBtn = el.querySelector("[data-close]");
+    if(closeBtn) closeBtn.focus();
+  }
+  function closeModal(el){
+    el.classList.remove("open");
+    document.body.style.overflow = "";
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  $$("[data-modal]").forEach(function(btn){
+    btn.addEventListener("click", function(e){
+      e.preventDefault();
+      var id = btn.getAttribute("data-modal");
+      var el = document.getElementById(id);
+      if(el) openModal(el);
+    });
+  });
+  $$(".bao-modal").forEach(function(m){
+    m.addEventListener("click", function(e){
+      if(e.target === m) closeModal(m);
+    });
+    var c = m.querySelector("[data-close]");
+    if(c) c.addEventListener("click", function(){closeModal(m);});
+  });
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+      $$(".bao-modal.open").forEach(function(m){closeModal(m);});
+    }
+  });
+
+  /* ---------- 作者资料 ---------- */
+  var authorModal = $("#baoModalAuthor");
+  $$("[data-author]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var parts = btn.getAttribute("data-author").split("|");
+      var name = parts[0] || "创作者";
+      $("#baoAuthorTitle").textContent = name;
+      $("#baoAuthorAva").textContent = name.charAt(0);
+      $("#baoAuthorField").textContent = parts[1] || "";
+      $("#baoAuthorBio").textContent = parts[4] || "";
+      $("#baoAuthorNums").textContent = "作品 " + (parts[2]||"-") + " 条 · 粉丝 " + (parts[3]||"-");
+      openModal(authorModal);
+    });
+  });
+
+  /* ---------- 表单提交 ---------- */
+  $$("[data-form]").forEach(function(form){
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var kind = form.getAttribute("data-form");
+      var modal = form.closest(".bao-modal");
+      if(modal) closeModal(modal);
+      form.reset();
+      toast(kind === "订阅" ? "订阅成功，请留意邮箱确认信" : "提交成功，我们会在 3 个工作日内联系你");
+    });
+  });
+
+  /* ---------- 数字滚动 ---------- */
+  var counters = $$("[data-count]");
+  var counted = false;
+  function runCounters(){
+    if(counted) return;
+    counted = true;
+    counters.forEach(function(el){
+      var target = parseFloat(el.getAttribute("data-count")) || 0;
+      var suffix = el.querySelector("span") ? el.querySelector("span").outerHTML : "";
+      var dur = 1100, start = null;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start)/dur, 1);
+        var eased = 1 - Math.pow(1-p, 3);
+        var val = Math.round(target * eased);
+        var disp = val >= 10000 ? (val/10000).toFixed(1) + "万" : val.toLocaleString("zh-CN");
+        el.innerHTML = disp + suffix;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if("IntersectionObserver" in window){
+    var cObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ runCounters(); cObs.disconnect(); }
+      });
+    },{threshold:.35});
+    var statBlock = $(".bao-hero-stats");
+    if(statBlock) cObs.observe(statBlock);
+  }else{
+    runCounters();
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = $("#baoTopBtn");
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 520) topBtn.classList.add("show");
+    else topBtn.classList.remove("show");
+  }, {passive:true});
+  topBtn.addEventListener("click", function(){
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+
+  /* ---------- 卡片悬停已有 CSS；此处补充键盘可达提示 ---------- */
+  $$(".bao-vcard, .bao-focus-main, .bao-author-card").forEach(function(card){
+    card.addEventListener("keydown", function(e){
+      if(e.key === "Enter") card.click();
+    });
+  });
+
+})();
+</script>
+
+</body>
+  </html>
